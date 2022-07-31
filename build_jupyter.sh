@@ -1,6 +1,6 @@
 NAME=jupyter
 IMAGE=ramvarra/$NAME
-VERSIONS="3.10.0 latest"
+VERSIONS="3.10.5 latest"
 REGISTRY=jupiter.ramvarra.com:5000
 
 

@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-ENV PYTHON_VERSION=3.10.0
+ENV PYTHON_VERSION=3.10.5
 ENV TMP_BUILD_DIR=/tmp/python${PYTHON_VERSION}
 ENV PYTHON_SRC_URL=https://www.python.org/ftp/python/${PYTHON_VERSION}/Python-${PYTHON_VERSION}.tgz
 
@@ -23,7 +23,6 @@ RUN \
 
 RUN \
     python3.10 -m pip install --upgrade pip \
-    && python3.10 -m pip install numpy pandas jupyter requests pytz \
-                        api4jenkins
+    && python3.10 -m pip install numpy pandas jupyter requests pytz openpyxl
 
 CMD ["bash"]
