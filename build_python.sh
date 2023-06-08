@@ -1,6 +1,6 @@
 NAME=python
 IMAGE=ramvarra/$NAME
-VERSIONS="3.10.5 latest"
+VERSIONS="3.11.4 latest"
 REGISTRY=jupiter.ramvarra.com:5000
 
 

@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-ENV PYTHON_VERSION=3.10.5
+ENV PYTHON_VERSION=3.11.4
 ENV TMP_BUILD_DIR=/tmp/python${PYTHON_VERSION}
 ENV PYTHON_SRC_URL=https://www.python.org/ftp/python/${PYTHON_VERSION}/Python-${PYTHON_VERSION}.tgz
 
@@ -19,10 +19,10 @@ RUN \
     && make altinstall \
     && cd / \
     && rm -rf ${TMP_BUILD_DIR} \
-    && ln -s /usr/local/bin/python3.10 /usr/local/bin/python3
+    && ln -s /usr/local/bin/python3.11 /usr/local/bin/python3
 
 RUN \
-    python3.10 -m pip install --upgrade pip \
-    && python3.10 -m pip install numpy pandas jupyter requests pytz openpyxl
+    python3.11 -m pip install --upgrade pip \
+    && python3.11 -m pip install numpy pandas jupyter requests pytz openpyxl
 
 CMD ["bash"]
